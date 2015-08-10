@@ -5,6 +5,7 @@ public class PlayerScript : MonoBehaviour
 {
     public float speed;
     public Vector3 dir;
+    public GameObject ps;
 
     // Use this for initialization
     void Start()
@@ -20,7 +21,8 @@ public class PlayerScript : MonoBehaviour
             if (dir == Vector3.forward)
             {
                 dir = Vector3.left;
-            } else
+            }
+            else
             {
                 dir = Vector3.forward;
             }
@@ -33,6 +35,15 @@ public class PlayerScript : MonoBehaviour
 
     void FixedUpdate()
     {
+      
+    }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Pickup")
+        {
+            other.gameObject.SetActive(false);
+            Instantiate(ps, transform.position, Quaternion.identity);
+        }
     }
 }
