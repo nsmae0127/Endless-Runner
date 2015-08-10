@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TileManager : MonoBehaviour
 {
-
     public GameObject[] tilePrefabs;
     public GameObject currentTile;
     private static TileManager instance;
@@ -76,7 +75,7 @@ public class TileManager : MonoBehaviour
             topTiles.Peek().SetActive(false);
             topTiles.Peek().name = "TopTile";
             leftTiles.Peek().SetActive(false);
-            topTiles.Peek().name = "LeftTile";
+            leftTiles.Peek().name = "LeftTile";
             leftTiles.Peek().SetActive(false);
         }
     }
@@ -114,5 +113,10 @@ public class TileManager : MonoBehaviour
         }
 
         // currentTile = (GameObject)Instantiate(tilePrefabs[randomIndex], currentTile.transform.GetChild(0).transform.GetChild(randomIndex).position, Quaternion.identity);
+    }
+
+    public void ResetGame()
+    {
+        Application.LoadLevel(Application.loadedLevel);
     }
 }

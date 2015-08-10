@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ParticleScript : MonoBehaviour
 {
-    private ParticleSystem ps;
+    public ParticleSystem ps;
 
     // Use this for initialization
     void Start()
