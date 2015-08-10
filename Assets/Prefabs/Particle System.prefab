@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 462718}
   - 198: {fileID: 19886920}
   - 199: {fileID: 19964626}
-  - 114: {fileID: 11469224}
+  - 114: {fileID: 11475414}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11469224
+--- !u!114 &11475414
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -41,7 +41,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04155bb8ce7491a409958f833a9a683d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ps: {fileID: 0}
 --- !u!198 &19886920
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -52,7 +51,7 @@ ParticleSystem:
   startDelay: 0
   speed: 1
   randomSeed: 0
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   moveWithTransform: 1
@@ -1137,7 +1136,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 150796}

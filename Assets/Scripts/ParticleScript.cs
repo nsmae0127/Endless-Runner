@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ParticleScript : MonoBehaviour
 {
-    public ParticleSystem ps;
+    private ParticleSystem ps;
 
     // Use this for initialization
     void Start()
@@ -14,6 +14,9 @@ public class ParticleScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!ps.isPlaying)
+        {
+            Destroy(gameObject);
+        }
     }
 }
